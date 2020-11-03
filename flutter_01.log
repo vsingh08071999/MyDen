@@ -1,0 +1,80 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --no-color run --machine --track-widget-creation --device-id=edge lib\main.dart
+
+## exception
+
+ArgumentError: Invalid argument (URI scheme not allowed): "file:///C:/Users/Vishal%20Singh/AndroidStudioProjects/myden/lib/administration/vendors/vendorsScreen.dart"
+
+```
+#0      DartUri._recordAbsoluteUri (package:dwds/src/utilities/dart_uri.dart:86:7)
+#1      DartUri.recordAbsoluteUris (package:dwds/src/utilities/dart_uri.dart:60:9)
+<asynchronous suspension>
+#2      AppInspector._initialize (package:dwds/src/debugging/inspector.dart:88:19)
+<asynchronous suspension>
+#3      AppInspector.initialize (package:dwds/src/debugging/inspector.dart:152:24)
+#4      ChromeProxyService.createIsolate (package:dwds/src/services/chrome_proxy_service.dart:171:37)
+<asynchronous suspension>
+#5      ChromeProxyService.create (package:dwds/src/services/chrome_proxy_service.dart:138:23)
+#6      DebugService.start (package:dwds/src/services/debug_service.dart:142:55)
+#7      DevHandler._startLocalDebugService (package:dwds/src/handlers/dev_handler.dart:184:25)
+#8      _rootRunUnary (dart:async/zone.dart:1198:47)
+#9      _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#10     _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#11     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#12     Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#13     Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#14     Future._asyncCompleteWithValue.<anonymous closure> (dart:async/future_impl.dart:567:7)
+#15     _rootRun (dart:async/zone.dart:1190:13)
+#16     _CustomZone.run (dart:async/zone.dart:1093:19)
+#17     _CustomZone.runGuarded (dart:async/zone.dart:997:7)
+#18     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1037:23)
+#19     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#20     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#21     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#22     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:169:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel beta, 1.23.0-18.1.pre, on Microsoft Windows [Version 10.0.18362.1139], locale en-IN)
+    • Flutter version 1.23.0-18.1.pre at D:\flutter
+    • Framework revision 198df796aa (3 weeks ago), 2020-10-15 12:04:33 -0700
+    • Engine revision 1d12d82d9c
+    • Dart version 2.11.0 (build 2.11.0-213.1.beta)
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 29.0.3)
+    • Android SDK at C:\Users\Vishal Singh\AppData\Local\Android\sdk
+    • Platform android-29, build-tools 29.0.3
+    • Java binary at: C:\Program Files\Android\Android Studio3\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_212-release-1586-b04)
+    • All Android licenses accepted.
+
+[✗] Chrome - develop for the web (Cannot find Chrome executable at .\Google\Chrome\Application\chrome.exe)
+    ! Cannot find Chrome. Try setting CHROME_EXECUTABLE to a Chrome executable.
+
+[✓] Android Studio (version 3.6)
+    • Android Studio at C:\Program Files\Android\Android Studio3
+    • Flutter plugin version 45.1.1
+    • Dart plugin version 192.7761
+    • Java version OpenJDK Runtime Environment (build 1.8.0_212-release-1586-b04)
+
+[✓] IntelliJ IDEA Community Edition (version 2020.1)
+    • IntelliJ at C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.1.1
+    • Flutter plugin version 45.1.3
+    • Dart plugin version 201.7223.99
+
+[✓] VS Code (version 1.49.2)
+    • VS Code at C:\Users\Vishal Singh\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.14.1
+
+[✓] Connected device (2 available)
+    • Web Server (web) • web-server • web-javascript • Flutter Tools
+    • Edge (web)       • edge       • web-javascript • Microsoft Edge 86.0.622.58
+
+! Doctor found issues in 1 category.
+```
